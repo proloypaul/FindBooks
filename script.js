@@ -19,5 +19,24 @@ const getSearchText = () => {
 
 const dispalyBook = books => {
     // console.log(books)
-    books.forEach(book => console.log(book.author_name[0]));
+    const searchResult = document.getElementById("searchResult");
+    searchResult.textContent = "";
+    books.forEach(book => {
+        console.log(book);
+        // create div element
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <div class="book">
+                <img src="javascript.jpg" alt="Empty!">
+                <div class="bookTitle">
+                    <h1>Name: javascript</h1>
+                    <h3>Writer: jankar Mahmmud</h3>
+                    <h3>Publisher: programming hero, IT sector</h3>
+                    <h3>First Publish: 2000</h3>
+                </div>
+            </div>
+        `
+        searchResult.appendChild(div);
+
+    });
 }
