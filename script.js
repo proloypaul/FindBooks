@@ -1,1 +1,4 @@
-console.log("I am okay")
+// get search text value 
+const getSearchText = () => {
+    console.log("onclick done");
+}

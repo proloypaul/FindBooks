@@ -1,0 +1,19 @@
+section{
+    padding: 20px;
+}
+/* style search section */
+#inputText{
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    width: 50%;
+}
+.searchBtn{
+    background-color: whitesmoke;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
