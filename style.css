@@ -16,4 +16,9 @@ section{
     padding: 10px 20px;
     border: 2px solid black;
     border-radius: 10px;
+    cursor: pointer;
+}
+.searchBtn:hover{
+    background-color: black;
+    color: white;
 }
