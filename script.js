@@ -18,7 +18,7 @@ const getSearchText = () => {
 };
 
 const dispalyBook = books => {
-    // console.log(books)
+    console.log(books)
     const searchResult = document.getElementById("searchResult");
     searchResult.textContent = "";
     books.forEach(book => {
@@ -29,10 +29,10 @@ const dispalyBook = books => {
             <div class="book">
                 <img src="javascript.jpg" alt="Empty!">
                 <div class="bookTitle">
-                    <h1>Name: javascript</h1>
-                    <h3>Writer: jankar Mahmmud</h3>
-                    <h3>Publisher: programming hero, IT sector</h3>
-                    <h3>First Publish: 2000</h3>
+                    <h1>Name: ${book.title}</h1>
+                    <h3>Writer: ${book.author_name[0]}</h3>
+                    <h3>Publisher: ${book.publisher[0]}</h3>
+                    <h3>First Publish: ${book.first_publish_year}</h3>
                 </div>
             </div>
         `
