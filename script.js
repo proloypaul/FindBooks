@@ -52,7 +52,7 @@ const dispalyBook = books => {
                 <img src=" https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" alt="Empty!">
                 <div class="bookTitle">
                     <h1>Name: ${book.title}</h1>
-                    <h3>Writer: ${book.author_name ? book.author_name[0] : "Not find"}</h3>
+                    <h3>Writer: ${book.author_name ? book.author_name[0] : "Not find"}</h3> 
                     <h3>Publisher: ${book.publisher ? book.publisher[0] : "Not find"}</h3>
                     <h3>First Publish Date: ${book.first_publish_year ? book.first_publish_year: "Not find"}</h3>
 
