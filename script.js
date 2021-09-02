@@ -17,7 +17,7 @@ const getSearchText = () => {
         searchResult.appendChild(div)
 
     }else{
-        const url = `http://openlibrary.org/search.json?q=${getInputText}`
+        const url = `https://openlibrary.org/search.json?q=${getInputText}`
         fetch(url)
             .then(res => res.json())
             .then(data => dispalyBook(data.docs))
