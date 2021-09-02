@@ -27,7 +27,7 @@ const dispalyBook = books => {
         const div = document.createElement("div");
         div.innerHTML = `
             <div class="book">
-                <img src="javascript.jpg" alt="Empty!">
+                <img src=" https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" alt="Empty!">
                 <div class="bookTitle">
                     <h1>Name: ${book.title}</h1>
                     <h3>Writer: ${book.author_name[0]}</h3>
