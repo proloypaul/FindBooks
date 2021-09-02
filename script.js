@@ -31,7 +31,6 @@ const dispalyBook = books => {
     // console.log(books)
     const searchResult = document.getElementById("searchResult");
     searchResult.textContent = "";
-    let count = 1;
 
     // if data is  empty in this Api
     if(books.length === 0){
