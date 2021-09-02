@@ -1,6 +1,6 @@
 // get search text value 
 const getSearchText = () => {
-    console.log("onclick done");
+    // console.log("onclick done");
     const inputText = document.getElementById("inputText");
     const getInputText = inputText.value 
     inputText.value = "";
@@ -44,8 +44,7 @@ const dispalyBook = books => {
     };
     books?.forEach(book => {
         // console.log(book);
-        const totalCount = count++;
-        // console.log(totalCount);
+
         // create div element
         const div = document.createElement("div");
         div.innerHTML = `
@@ -56,11 +55,20 @@ const dispalyBook = books => {
                     <h3>Writer: ${book.author_name ? book.author_name[0] : "Not find"}</h3>
                     <h3>Publisher: ${book.publisher ? book.publisher[0] : "Not find"}</h3>
                     <h3>First Publish Date: ${book.first_publish_year ? book.first_publish_year: "Not find"}</h3>
-                    <h3>Search Result Number: ${totalCount} </h3>
+
                 </div>
             </div>
         `
         searchResult.appendChild(div);
 
     });
-}
+    // show search result below searchBox
+    const showSearchResult = document.getElementById("showSearchResult")
+    showSearchResult.textContent = "";
+    const div = document.createElement("div")
+    div.innerHTML = `
+        <h2>Search Result: ${books.length}</h2>
+    `
+    showSearchResult.appendChild(div);
+    // console.log(books.length);
+};  
