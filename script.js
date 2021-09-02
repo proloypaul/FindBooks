@@ -33,7 +33,7 @@ const dispalyBook = books => {
     searchResult.textContent = "";
     let count = 1;
 
-    // if data is not this Api
+    // if data is  empty in this Api
     if(books.length === 0){
         // console.log("Data ney")
         const div = document.createElement("div");
@@ -53,10 +53,10 @@ const dispalyBook = books => {
                 <img src=" https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" alt="Empty!">
                 <div class="bookTitle">
                     <h1>Name: ${book.title}</h1>
-                    <h3>Writer: ${book.author_name[0] ? book.author_name[0] : "Not find"}</h3>
-                    <h3>Publisher: ${book.publisher[0] ? book.publisher[0] : "Not find"}</h3>
-                    <h3>First Publish: ${book.first_publish_year ? book.first_publish_year: "Not find"}</h3>
-                    <h3>Result Number: ${totalCount} </h3>
+                    <h3>Writer: ${book.author_name ? book.author_name[0] : "Not find"}</h3>
+                    <h3>Publisher: ${book.publisher ? book.publisher[0] : "Not find"}</h3>
+                    <h3>First Publish Date: ${book.first_publish_year ? book.first_publish_year: "Not find"}</h3>
+                    <h3>Search Result Number: ${totalCount} </h3>
                 </div>
             </div>
         `
