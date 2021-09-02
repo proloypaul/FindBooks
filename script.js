@@ -12,7 +12,7 @@ const getSearchText = () => {
         searchResult.textContent = "";
         const div = document.createElement("div");
         div.innerHTML = `
-            <p>Write your book name in search box...</p>
+            <p class="wrongInput">Write your book name in search box...</p>
         `
         searchResult.appendChild(div)
 
@@ -25,17 +25,25 @@ const getSearchText = () => {
     
 };
 
+
+// display search result 
 const dispalyBook = books => {
     // console.log(books)
     const searchResult = document.getElementById("searchResult");
     searchResult.textContent = "";
     let count = 1;
-    // if(books === "[]"){
-    //     console.log("Not here")
-    // }
+
+    // if data is not this Api
+    if(books.length === 0){
+        // console.log("Data ney")
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <p class="wrongInput">Your input incorrect please write a book name...</p>
+        `
+        searchResult.appendChild(div);
+    };
     books?.forEach(book => {
-        console.log(book);
-        // console.log(1);
+        // console.log(book);
         const totalCount = count++;
         // console.log(totalCount);
         // create div element
